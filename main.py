@@ -21,6 +21,7 @@ app = FastAPI(title="Google Maps Scraper API")
 
 # CORS middleware
 app.add_middleware(
+    CORSMiddleware,
     allow_origin_regex=".*",
     allow_credentials=True,
     allow_methods=["*"],

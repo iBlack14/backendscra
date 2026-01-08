@@ -19,7 +19,7 @@ if sys.platform == 'win32':
 
 app = FastAPI(title="Google Maps Scraper API")
 
-# CORS middleware
+# CORS middleware - Force Deploy Fix
 app.add_middleware(
     CORSMiddleware,
     allow_origin_regex=".*",

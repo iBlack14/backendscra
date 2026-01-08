@@ -67,6 +67,7 @@ async def root():
 async def start_scraper(config: ScraperConfig):
     """Start the scraping process"""
     global scraper, scraper_task
+    print(f"Recibida petición de start: {config.rubro} en {config.departamento}")
     
     if scraper and scraper.is_running:
         raise HTTPException(status_code=400, detail="Scraper is already running")
